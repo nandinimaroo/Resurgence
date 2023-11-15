@@ -38,7 +38,6 @@ public class BulletScript : MonoBehaviour {
 				Animator anim=g.GetComponent<Animator>();
 				anim.SetTrigger("IsFalling");
 				Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-
 				Destroy(g,0.2f);
 			
 				}

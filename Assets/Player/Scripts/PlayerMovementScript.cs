@@ -84,7 +84,10 @@ public float health=100;
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			rb.AddRelativeForce (Vector3.up * jumpForce);
 			if (_jumpSound)
-				_jumpSound.Play ();
+			{
+								_jumpSound.Play ();
+
+			}
 			else
 				print ("Missig jump sound.");
 			_walkSound.Stop ();
@@ -119,6 +122,7 @@ public float health=100;
 						if (!_walkSound.isPlaying) {
 							//	print ("playam hod");
 							_walkSound.Play ();
+
 							_runSound.Stop ();
 						}					
 					} else if (maxSpeed == 5) {
@@ -138,6 +142,7 @@ public float health=100;
 				_runSound.Stop ();
 			}
 		} else {
+
 			print ("Missing walk and running sounds.");
 		}
 
