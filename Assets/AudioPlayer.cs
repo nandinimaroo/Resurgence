@@ -18,8 +18,8 @@ public class AudioPlayer : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.A)||Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.D))
         {
-        source.PlayOneShot(walk);
-Debug.Log("hopefully playing");
+            if(!source.isPlaying)
+source.Play();Debug.Log("hopefully    ing");
         }
     }
 }

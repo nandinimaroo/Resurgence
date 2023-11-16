@@ -4,7 +4,7 @@ using System.Collections;
 
 public class MouseLookScript : MonoBehaviour {
 
-	[HideInInspector]
+	// [HideInInspector]
 	public Transform myCamera;
 	/*
 	 * Hiding the cursor.

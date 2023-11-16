@@ -16,7 +16,10 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters: []
-  m_AudioMixerGroupViews: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 5ef0cbff78e0234c3a2b04372e153aaf
+    name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
@@ -34,9 +37,10 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
+  - {fileID: 7683216166118517028}
   m_UserColorIndex: 0
   m_Mute: 0
-  m_Solo: 0
+  m_Solo: 1
   m_BypassEffects: 0
 --- !u!244 &24400004
 AudioMixerEffectController:
@@ -61,5 +65,30 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: a62358425fe5675f295c60d6af4e2252
-  m_FloatValues: {}
+  m_FloatValues:
+    a88f63f309737b0e79041b25f22e2536: 2.91
   m_TransitionOverrides: {}
+--- !u!244 &7683216166118517028
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: c8559e165d5de52648210729d404e41c
+  m_EffectName: Echo
+  m_MixLevel: dd8202ae138b44e7f8360bc6cfa0f4fd
+  m_Parameters:
+  - m_ParameterName: Delay
+    m_GUID: 807b2c431940c1f66aabb508b7854e72
+  - m_ParameterName: Decay
+    m_GUID: 871dfb602b568098fb67dd4df1bcff1d
+  - m_ParameterName: Max channels
+    m_GUID: 944f33928212cd3e2addd8cdf125503f
+  - m_ParameterName: Drymix
+    m_GUID: a816225476dd5f746b87725f7e95b6c2
+  - m_ParameterName: Wetmix
+    m_GUID: 1d3431a7117b4e3939d8acd5c63481b2
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0

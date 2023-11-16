@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sop HDR Audio Package for Unity 3D - README</title>
+	<style>
+	html {
+    	display: table;
+    	margin: auto;
+	}
+	body {
+		display: table-cell;
+		vertical-align: middle;
+
+		width: 800px;
+		margin: 40px 80px;
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size: 18px;
+		line-height: 29px;
+		color: #333333;
+		background-color: #ffffff;
+	}
+	pre {
+		background: #f5f5f5;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		overflow-x: auto;
+		padding: 5px 10px;
+		word-wrap: normal;
+	}
+	</style>
+</head>
+<body>
+
+<h1 id="sop-hdr-audio-package-for-unity-3d">Sop HDR Audio Package for Unity 3D</h1>
+<p><a href="mailto:sop3000@sopwerk.com">sop3000@sopwerk.com</a><br><a href="http://sop3000.sopwerk.com/hdraudio">http://sop3000.sopwerk.com/hdraudio</a></p>
+<hr>
+<p>This package is an implementation of the High Dynamic Range (HDR) audio manager for Unity 3D.<br>It is implemented according to the principles described in the DICE GDC&#39;09 <a href="http://www.slideshare.net/aclerwall/how-high-dynamic-range-audio-makes-battlefield-bad-company-go-boom-1292018">presentation</a> &quot;How High Dynamic Range Audio Makes Battlefield: Bad Company Go BOOM&quot;.</p>
+<p>During the development of my <a href="http://sop3000.sopwerk.com">sop3000 game</a>, I&#39;ve faced an issues with having too many sounds playing simultaneously in a single scene: I&#39;ve hit the Unity limit on number of voices, sound priorities were difficult to setup and manage, ducking was hard to do properly, etc.</p>
+<p>I&#39;ve chosen to implement an HDR audio approach in my game, as it promised to do mixing and prioritizing of all sounds in the scene automatically, and to give me a simple way to setup and manage sound definitions.</p>
+<p>I&#39;m quite happy how it turned out: the setup is easy enough, tweaking of the sounds does not take too much time and resulting mix is really good, as far as I can tell. But of course, your result may wary - it depends on the type of game this approach is used for.</p>
+<p>You can see how the audio manager actually works in the <a href="http://sop3000.sopwerk.com/demo">sop3000 game demo</a>.</p>
+<h1 id="how-to-use-the-package">How To Use the Package</h1>
+<p>In order to better understand principles of the HDR audio, I would recommend to go through DICE GDC&#39;09 <a href="http://www.slideshare.net/aclerwall/how-high-dynamic-range-audio-makes-battlefield-bad-company-go-boom-1292018">presentation</a>.</p>
+<p>A good introduction into HDR audio can also be found in the <a href="https://www.audiokinetic.com/download/documents/Wwise_HDR_UserGuide_en.pdf">Wwise HDR User&#39;s Guide</a>.<br>It differs slightly from the way DICE did it, but I find the introduction is still good.</p>
+<h2 id="sop-hdr-audio-demo">Sop HDR Audio Demo</h2>
+<p>I&#39;ve put together a simple demo application to show basics of the package:</p>
+<ul>
+<li><a href="http://sop3000.sopwerk.com/hdraudio/demo">Sop HDR Audio Demo</a> (webplayer)</li>
+</ul>
+<p>On the left panel of the demo application there is a single listener icon surrounded by multiple sound sources, all represented by different icons.
+The right panel shows main HDR audio properties and some properties of the currently selected sound source.
+You can start or stop any sound at any time by clicking on the corresponding icon.
+By dragging icons around on the screen, you can see how the distance between the sound source and listener affects Perceived Loudness and Volume properties of the sound.</p>
+<h2 id="debug-window">Debug Window</h2>
+<p>The Debug Window (accessible from <em>Windows -&gt; HDR Audio Debug Window</em> menu) provides detailed information about all active HDR sounds on the scene in the real time. 
+It can be quite useful during the fine-tuning of HDR properties.</p>
+<h2 id="setup-in-a-new-scene">Setup in a new Scene</h2>
+<ol>
+<li><p>On the empty scene, create a new game object (e.g. HDRAudio) and assign <code>HDRAudio.cs</code> script to it. The HDRAudio service is a singleton and is accessible from  everywhere in the code via <code>HDRAudio.Instance</code> property.</p>
+</li>
+<li><p>In order for the audio clip to be played by the HDRAudio service, you will have to create a <strong>sound definition</strong> prefab - just a regular game object with either <code>SingleSoundDef.cs</code> or <code>GroupSoundDef.cs</code> script assigned to it. The <code>SingleSoundDef.cs</code> definition is used by single audio clip sounds. The <code>GroupSoundDef.cs</code> script is used to define a sound that will play one randomly selected audio clip from a list on each invocation. See <em>Turret</em> sound prefab in <code>Sopwerk/HDRAudio/Demo/Sounds</code> folder for example of group sound definition.</p>
+</li>
+<li><p>Now the sound can be played as shown in the following example:   </p>
+</li>
+</ol>
+<pre><code>    using UnityEngine;
+    using Sopwerk.HDRAudio;  
+
+    public class HowToUseHDRAudio : MonoBehaviour
+    {
+        // Should be linked to the Sound Definition prefab via the Unity 
+        // editor inspector window.
+        [SerializeField]
+        private SoundDef _soundDef = null;  
+
+        public void PlaySound()
+        {
+            HDRAudio.Instance.Play(_soundDef, transform.position, transform);
+        }
+    }
+</code></pre><h2 id="sound-definition-properties">Sound Definition Properties</h2>
+<ul>
+<li>The <code>Loudness</code> property is used by the audio manager to compute perceived loudness of a sound in the scene. </li>
+<li><p>The <code>Priority</code> property controls which sound will be culled when there are too many sound clips playing at once. </p>
+</li>
+<li><p>Section <code>Near Player Mods</code> is used to reduce loudness of a sound played in close proximity to the listener. 
+For instance, the <em>Thruster</em> sound in the demo application has <code>Near Player Loudness Mod</code> property defined. Try to drag <em>Rocket</em> icon over the listener icon to hear a reduction of the sound loudness by -10 (dB). </p>
+</li>
+<li><p>The <code>Repeat Rate</code> property is not used directly by the audio manager but together with the RepeatingSoundLimiter utility class. See the <code>SoundSourceWidger.RepeatPlaySound()</code> method for usage example. </p>
+</li>
+<li><p>The properties in the <code>Audio Source</code> section are basically the same as in the AudioSource unity component.</p>
+</li>
+<li><p>The <code>RMS Curves</code> feature makes it possible for the audio manager to control a top position of the HDR window more precisely - based on an actual amplitude of the playing sound clip.<br>The RMS curve can be generated and then edited directly in the Inspector window of the selected sound prefab. From my experience, it makes little sense to define RMS curve for loops or for sounds with even amplitude. But you can see an immediate positive effect on the explosion or gunshot sounds.</p>
+</li>
+</ul>
+<h1 id="credits">Credits</h1>
+<ul>
+<li>HDR Audio: a dynamic mixing technique used in EA Digital Illusions CE Frostbite Engine to allow relatively louder sounds to drown out softer sounds.</li>
+<li>All icons are from <a href="http://game-icons.net">http://game-icons.net</a>:<ul>
+<li><a href="http://game-icons.net/lorc/originals/screen-impact.html">Screen impact icon</a> by Lorc</li>
+<li><a href="http://game-icons.net/sbed/originals/turret.html">Turret icon</a> by sbed</li>
+<li><a href="http://game-icons.net/lorc/originals/vortex.html">Vortex icon</a> by Lorc</li>
+<li><a href="http://game-icons.net/lorc/originals/alien-stare.html">Alien stare icon</a> by Lorc</li>
+<li><a href="http://game-icons.net/lorc/originals/whirlwind.html">Whirlwind icon</a> by Lorc</li>
+<li><a href="http://game-icons.net/lorc/originals/rocket.html">Rocket icon</a> by Lorc</li>
+<li><a href="http://game-icons.net/delapouite/originals/human-ear.html">Human ear icon</a> by Delapouite</li>
+</ul>
+</li>
+<li>Move cursor is from <a href="http://www.iconarchive.com/show/oxygen-icons-by-oxygen-icons.org/Actions-transform-move-icon.html">http://www.iconarchive.com</a> by Oxygen Team</li>
+<li>Background texture is Brushed Aluminum texture from <a href="http://www.texturex.com">http://www.texturex.com</a></li>
+<li>Sound clips:<ul>
+<li><a href="https://www.freesound.org/people/CGEffex/sounds/93101">cgeffex_tornado.wav</a> by <a href="https://www.freesound.org/people/CGEffex">CGEffex</a></li>
+<li><a href="http://www.freesound.org/people/Quaker540/sounds/245372">quaker540_hq-explosion.wav</a> by <a href="http://www.freesound.org/people/Quaker540">Quaker540</a></li>
+<li><a href="http://www.freesound.org/people/MickBoere/sounds/269064">mickboere_jet-loop-01.wav</a> by <a href="http://www.freesound.org/people/MickBoere">MickBoere</a></li>
+<li>Answer Long1.waw, Answer Long2.wav, Answer Long3.wav, Excited Long1.wav, Question Long1.wav, Question Long2.wav are from <a href="https://www.assetstore.unity3d.com/en/?gclid=CjwKEAjwjd2pBRDB4o_ymcieoAQSJABm4egocllwzxs9zrLHVya8IyP4Chxwndu4-jVzqgRon7YM7RoCioDw_wcB#!/content/32787">Gibberish Dialogue &amp; Voice pack Volume 1 free asset</a> by <a href="https://www.assetstore.unity3d.com/en/?gclid=CjwKEAjwjd2pBRDB4o_ymcieoAQSJABm4egocllwzxs9zrLHVya8IyP4Chxwndu4-jVzqgRon7YM7RoCioDw_wcB#!/publisher/5378">Rocklynn Productions</a></li>
+<li>Laser_00.wav, WarpDrive_01.wav are from <a href="https://www.assetstore.unity3d.com/en/?gclid=CjwKEAjwjd2pBRDB4o_ymcieoAQSJABm4egocllwzxs9zrLHVya8IyP4Chxwndu4-jVzqgRon7YM7RoCioDw_wcB#!/content/32830">Sci-Fi Sfx free asset</a> by <a href="https://www.assetstore.unity3d.com/en/?gclid=CjwKEAjwjd2pBRDB4o_ymcieoAQSJABm4egocllwzxs9zrLHVya8IyP4Chxwndu4-jVzqgRon7YM7RoCioDw_wcB#!/publisher/5673">Little Robot Sound Factory</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="contact">Contact</h1>
+<p><a href="mailto:sop3000@sopwerk.com">sop3000@sopwerk.com</a><br><a href="http://sop3000.sopwerk.com/hdraudio">http://sop3000.sopwerk.com/hdraudio</a></p>
+<h1 id="license">LICENSE</h1>
+<p>The license below covers all of the C# code files in this package, all non-code assets, including but not limited to: models, textures, sounds, etc. are the property of their respective author and under other licenses.</p>
+<hr>
+<p>This is free and unencumbered software released into the public domain.</p>
+<p>Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.</p>
+<p>In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>For more information, please refer to <a href="http://unlicense.org">http://unlicense.org</a></p>
+
+</body></html>

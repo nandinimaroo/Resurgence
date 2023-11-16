@@ -4,7 +4,6 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovementScript : MonoBehaviour {
 	Rigidbody rb;
-
 	[Tooltip("Current players speed")]
 	public float currentSpeed;
 	[Tooltip("Assign players camera here")]
@@ -121,6 +120,7 @@ public float health=100;
 						//	print ("tu sem");
 						if (!_walkSound.isPlaying) {
 							//	print ("playam hod");
+							Debug.Log("here");
 							_walkSound.Play ();
 
 							_runSound.Stop ();

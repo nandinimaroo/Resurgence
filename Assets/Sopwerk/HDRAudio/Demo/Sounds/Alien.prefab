@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &177778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453832}
+  - component: {fileID: 11486416}
+  m_Layer: 0
+  m_Name: Alien
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11486416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b5e0fe06765784dae324c68b16a7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bypassHDR: 0
+  _priority: 3
+  _loudness: 80
+  _nearPlayerLoudnessMod: 0
+  _nearPlayerFixedLoudness: 0
+  _repeatRate: 10
+  _is3D: 1
+  _ignoreListenerPause: 0
+  _isLoop: 0
+  _minDistance: 10
+  _maxDistance: 500
+  _pitch: 1
+  _dopplerLevel: 0
+  _rmsCurveEnabled: 0
+  _pitchVariation:
+    Min: 0
+    Max: 0
+  _clips:
+  - {fileID: 8300000, guid: 72aeccd5a7daff64098732f01002f692, type: 3}
+  - {fileID: 8300000, guid: 40260c96a10fa664b902caef89bbf8b7, type: 3}
+  - {fileID: 8300000, guid: 4e1a2f1fa2cc2af4790c2fe92c66c952, type: 3}
+  - {fileID: 8300000, guid: 7b594a1278cf2484ca8286406ad30722, type: 3}
+  - {fileID: 8300000, guid: 76553664d435bbe46bd96a6260c8b9d1, type: 3}
+  - {fileID: 8300000, guid: 1d9261d4921c2bb4aa46c0400b871c2f, type: 3}
+  _rmsCurves: []
