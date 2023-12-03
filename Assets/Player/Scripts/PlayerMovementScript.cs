@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovementScript : MonoBehaviour {
 	Rigidbody rb;
@@ -22,7 +23,6 @@ public float health=100;
 		cameraMain = transform.Find("Main Camera").transform;
 		bulletSpawn = cameraMain.Find ("BulletSpawn").transform;
 		ignoreLayer = 1 << LayerMask.NameToLayer ("Player");
-
 	}
 	private Vector3 slowdownV;
 	private Vector2 horizontalMovement;
@@ -37,6 +37,13 @@ public float health=100;
 	public void takeDamage(float n)
 	{
 		health-=n;
+		if(health<=0)
+		{
+			      Cursor.lockState = CursorLockMode.None;
+Cursor.visible = true;
+Time.timeScale = 1.0f;
+			SceneManager.LoadScene("RetryL1");
+		}
 	}
 	/*
 	* Accordingly to input adds force and if magnitude is bigger it will clamp it.

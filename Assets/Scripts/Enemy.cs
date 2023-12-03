@@ -25,6 +25,9 @@ private GameObject Player;
 public PlayerMovementScript script;
 public int r1;
 public int r2;
+
+
+
     private void Start()
     {
         gameObject.tag="TreatableZombie";
@@ -112,6 +115,7 @@ script.takeDamage(damage_per_attack*Time.deltaTime);
     
      private void Update()
     {
+        
             if(timer<=0)
         {
         gameObject.tag="UntreatableZombie";

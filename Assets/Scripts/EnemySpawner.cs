@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+using UnityEngine.SceneManagement;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
@@ -18,7 +18,7 @@ public GameObject EnemyPrefab;
     void Start()
     {
 counter=TotalZombies;
-        InvokeRepeating("spawnEnemy",0.1f,Interval);
+        InvokeRepeating("spawnEnemy",0.8f,Interval);
     }
    bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
@@ -35,6 +35,16 @@ counter=TotalZombies;
 
         result = Vector3.zero;
         return false;
+    }
+    void Update()
+    {
+        if(GameStats.CaptureScore+GameStats.ZombiesKilled==TotalZombies)
+        {
+             Cursor.lockState = CursorLockMode.None;
+Cursor.visible = true;
+Time.timeScale = 1.0f;
+            SceneManager.LoadScene("L1toL2");
+        }
     }
  
     void spawnEnemy()

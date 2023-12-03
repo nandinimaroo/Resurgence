@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239786156}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0.08, y: 2.08, z: 0.247}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,7 +85,7 @@ TextMesh:
   m_GameObject: {fileID: 1239786156}
   m_Text: Time Left
   m_OffsetZ: 0
-  m_CharacterSize: 0.4
+  m_CharacterSize: 0.3
   m_LineSpacing: 1
   m_Anchor: 1
   m_Alignment: 1
@@ -813,21 +813,21 @@ AudioSource:
   m_GameObject: {fileID: 4103059298757344227}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 0de14c2eca9b992739c44f22131ff99f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 258857b6c358d0644a339892e0212203, type: 3}
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 70608bede45f73483bca7e75b414274d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.26
+  m_Volume: 0.063
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 1.25
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -875,7 +875,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.083333336
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -890,7 +890,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.425
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -916,15 +916,15 @@ MonoBehaviour:
   zPos: 0
   TimeLeft: 0
   timer: 0
-  attackRange: 3
+  attackRange: 2
   distanceFromPlayer: 0
   enemy: {fileID: 0}
   tag1: 
   countdown: {fileID: 1239786158}
-  damage_per_attack: 0.8
+  damage_per_attack: 10
   script: {fileID: 0}
-  r1: 5
-  r2: 10
+  r1: 10
+  r2: 15
 --- !u!195 &58145974
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -934,12 +934,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 4103059298757344227}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
+  m_Radius: 1
+  m_Speed: 2
+  m_Acceleration: 1
+  avoidancePriority: 99
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

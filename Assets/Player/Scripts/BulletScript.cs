@@ -39,7 +39,8 @@ public class BulletScript : MonoBehaviour {
 				anim.SetTrigger("IsFalling");
 				Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
 				Destroy(g,0.2f);
-			
+							GameStats.ZombiesKilled++;
+
 				}
 			}		
 			Destroy(gameObject);

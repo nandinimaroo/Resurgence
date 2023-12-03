@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using static System.Math;
 //using UnityStandardAssets.ImageEffects;
 
 public enum GunStyles{
@@ -96,7 +97,8 @@ public class GunScript : MonoBehaviour {
 
 		CrossHairExpansionWhenWalking();
 
-
+				GameStats.BulletsInGun=bulletsInTheGun;
+				GameStats.ReloadsLeft=(int)Floor(bulletsIHave/amountOfBulletsPerLoad);
 	}
 
 	/*
@@ -438,6 +440,8 @@ public class GunScript : MonoBehaviour {
 
 				waitTillNextFire = 1;
 				bulletsInTheGun -= 1;
+				// GameStats.BulletsInGun=bulletsInTheGun;
+				// GameStats.ReloadsLeft=(int)Floor(bulletsIHave/amountOfBulletsPerLoad);
 			}
 				
 			else{
@@ -498,6 +502,8 @@ public class GunScript : MonoBehaviour {
 						bulletsInTheGun += valueForBoth;
 					}
 				}
+				// 	GameStats.BulletsInGun=bulletsInTheGun;
+				// GameStats.ReloadsLeft=(int)Floor(bulletsIHave/amountOfBulletsPerLoad);
 			} else {
 				reloadSound_source.Stop ();
 
