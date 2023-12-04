@@ -21,7 +21,6 @@ public GameObject EnemyPrefab;
     {
 counter=TotalZombies;
         InvokeRepeating("spawnEnemy",3f,Interval);
-        InvokeRepeating("spawnEnemy",3f,Random.Range(1,2));
         
     }
    bool RandomPoint(Vector3 center, float range, out Vector3 result)
@@ -51,7 +50,7 @@ Time.timeScale = 1.0f;
         }
         if(GameStats.ZombiesTreated!=GameStats.CaptureScore)
         {
-            counter=5;
+            counter=3;
         }
     }
  
