@@ -48,10 +48,10 @@ Cursor.visible = true;
 Time.timeScale = 1.0f;
             SceneManager.LoadScene("GameEnd");
         }
-        if(GameStats.ZombiesTreated!=GameStats.CaptureScore)
-        {
-            counter=3;
-        }
+        // if(GameStats.ZombiesTreated!=GameStats.CaptureScore)
+        // {
+        //     counter=3;
+        // }
     }
  
     void spawnEnemy()

@@ -721,11 +721,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "After Knocking Down The Zombies You Find A Laboratory In The Hospital,
-    It Looks Like Someone Already Found A Cure. You Just Need To Go Near The Control
-    Unit And Follow Instructions. \nThe Catch Here Is That You Have To Stay In Range
-    Of The Control Unit For The Treatment To Work.\nBeware Of Toxic Zombies As They
-    Might Wander Into The Lab Any Moment."
+  m_text: 'After Successfully Capturing The Zombies, A Beacon Of Hope Emerges In
+    The Form Of A Laboratory Within The Hospital. It Appears That Someone Has Already
+    Discovered A Cure. Your Mission Shifts To Reaching The Control Unit And Following
+    The Instructions To Administer The Cure. The Catch Is That You Must Stay Within
+    Range Of The Control Unit For The Treatment To Be Effective. A Red Light Glows
+    When The Zombie Is Being Treated. Beware Of Toxic Zombies, As They May Wander
+    Into The Lab At Any Moment, Posing A Threat To Your Progress. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 36295308545f30006a9583a1624ff766, type: 2}
   m_sharedMaterial: {fileID: -4516758962757200226, guid: 36295308545f30006a9583a1624ff766, type: 2}

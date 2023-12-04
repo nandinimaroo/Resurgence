@@ -695,18 +695,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Earth Is In Turmoil With The After Effects Of The Apocalypse Caused By
-    A Mysterious Sonic Boom, Humanity Has Been Twisted And Transformed Into Relentless,
-    Infectious Beings, Zombies.\nAmidst The Ruins, A Flicker Of Hope Remains, You
-    Belong To The Group Of People Who Remained Unaffected After The Incident And
-    There Are People Who Can Be Still Treated.\nThere Has Been A Rumour Of A Sighting
-    Of A Group Infected People In The Hospital In The City.\nAs A Retired Army Doctor
-    You Take It Upon Yourself To Salvage What Remains Of The Infected And Find A
-    Cure. \nThese People Have Seconds Before They Succumb To The Disease. \nPress
-    \u2018Q\u2019 To Knock Them Down With Your Gun Before Time Runs Out. \nAfter
-    The Time Runs Out, They Become Toxic And Them Being Near You Would Decrease Your
-    Health. So You Must Shoot Them Down By Clicking. \nBe Careful Not To Kill Anyone
-    Who Is Not Toxic As They Can Be Treated. Use \u2018alt\u2019 For Better Aiming."
+  m_text: "In The Aftermath Of A Mysterious Apocalypse Triggered By A Sonic Boom,
+    Earth Is Plagued By A Zombie Outbreak. As A Retired Army Doctor Unaffected By
+    The Transformation, You Embark On A Mission To Salvage Those Still Treatable.
+    Rumors Circulate About Infected Individuals In A City Hospital. Armed With A
+    Gun, Press \u2018Q\u2019 To Knock Them Down Before They Succumb. After The Timer
+    Expires, They Turn Toxic, Threatening Your Health\u2014Click To Shoot. Be Cautious
+    Not To Harm The Treatable. Use 'alt' For Precise Aiming. Your Goal Is To Capture
+    As Many As You Can."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 36295308545f30006a9583a1624ff766, type: 2}
   m_sharedMaterial: {fileID: -4516758962757200226, guid: 36295308545f30006a9583a1624ff766, type: 2}

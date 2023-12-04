@@ -75,7 +75,7 @@ private void StopAndAttack()
 if(gameObject.tag=="UntreatableZombie")
 {
             animator.SetTrigger("IsAttacking");
-script.takeDamage(damage_per_attack*Time.deltaTime);
+script.takeDamage(damage_per_attack*Time.deltaTime/5);
 
 }
     }
