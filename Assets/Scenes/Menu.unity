@@ -697,10 +697,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Earth Is In Turmoil With The After Effects Of The Apocalypse Caused By
     A Mysterious Sonic Boom, Humanity Has Been Twisted And Transformed Into Relentless,
-    Infectious Beings.\nAmidst The Ruins, A Flicker Of Hope Remains, You Belong To
-    The Group Of People Who Remained Unaffected After The Incident And There Are
-    People Who Can Be Still Treated.\nThere Has Been A Rumour Of A Sighting Of A
-    Group Infected People In The Hospital In The City.\nAs A Retired Army Doctor
+    Infectious Beings, Zombies.\nAmidst The Ruins, A Flicker Of Hope Remains, You
+    Belong To The Group Of People Who Remained Unaffected After The Incident And
+    There Are People Who Can Be Still Treated.\nThere Has Been A Rumour Of A Sighting
+    Of A Group Infected People In The Hospital In The City.\nAs A Retired Army Doctor
     You Take It Upon Yourself To Salvage What Remains Of The Infected And Find A
     Cure. \nThese People Have Seconds Before They Succumb To The Disease. \nPress
     \u2018Q\u2019 To Knock Them Down With Your Gun Before Time Runs Out. \nAfter
@@ -797,12 +797,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   story: "Earth Is In Turmoil With The After Effects Of The Apocalypse Caused By
     A Mysterious Sonic Boom, Humanity Has Been Twisted And Transformed Into Relentless,
-    Infectious Beings. Amidst The Ruins, A Flicker Of Hope Remains, You Belong To
-    The Group Of People Who Remained Unaffected After The Incident And There Are
-    People Who Can Be Still Treated. There Has Been A Rumour Of A Sighting Of A Group
-    Infected People In The Hospital In The City. As A Retired Army Doctor You Take
-    It Upon Yourself To Salvage What Remains Of The Infected And Find A Cure.  These
-    People Have Seconds Before They Succumb To The Disease.  Press \u2018Q\u2019
+    Infectious Beings, Zombies. Amidst The Ruins, A Flicker Of Hope Remains, You
+    Belong To The Group Of People Who Remained Unaffected After The Incident And
+    There Are People Who Can Be Still Treated. There Has Been A Rumour Of A Sighting
+    Of A Group Infected People In The Hospital In The City. As A Retired Army Doctor
+    You Take It Upon Yourself To Salvage What Remains Of The Infected And Find A
+    Cure.  These People Have Seconds Before They Succumb To The Disease.  Press \u2018Q\u2019
     To Knock Them Down With Your Gun Before Time Runs Out.  After The Time Runs Out,
     They Become Toxic And Them Being Near You Would Decrease Your Health. So You
     Must Shoot Them Down By Clicking.  Be Careful Not To Kill Anyone Who Is Not Toxic

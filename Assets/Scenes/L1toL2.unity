@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 1262343807}
   - component: {fileID: 1262343809}
   - component: {fileID: 1262343808}
+  - component: {fileID: 1262343810}
   m_Layer: 5
   m_Name: Details
   m_TagString: Untagged
@@ -720,7 +721,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <level 2 description>
+  m_text: "After Knocking Down The Zombies You Find A Laboratory In The Hospital,
+    It Looks Like Someone Already Found A Cure. You Just Need To Go Near The Control
+    Unit And Follow Instructions. \nThe Catch Here Is That You Have To Stay In Range
+    Of The Control Unit For The Treatment To Work.\nBeware Of Toxic Zombies As They
+    Might Wander Into The Lab Any Moment."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 36295308545f30006a9583a1624ff766, type: 2}
   m_sharedMaterial: {fileID: -4516758962757200226, guid: 36295308545f30006a9583a1624ff766, type: 2}
@@ -797,6 +802,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262343806}
   m_CullTransparentMesh: 1
+--- !u!114 &1262343810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262343806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c17e6538a444183a8d13b4b311149d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  story: After Knocking Down The Zombies You Find A Laboratory In The Hospital, It
+    Looks Like Someone Already Found A Cure. You Just Need To Go Near The Control
+    Unit And Follow Instructions.  The Catch Here Is That You Have To Stay In Range
+    Of The Control Unit For The Treatment To Work. Beware Of Toxic Zombies As They
+    Might Wander Into The Lab Any Moment.
 --- !u!1 &1729264085
 GameObject:
   m_ObjectHideFlags: 0

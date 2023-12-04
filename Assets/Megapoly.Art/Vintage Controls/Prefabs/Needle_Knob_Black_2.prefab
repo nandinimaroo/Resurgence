@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5302624282265446056}
+  - component: {fileID: 7571311108084276067}
   - component: {fileID: 9095423131312843021}
   - component: {fileID: 6475499429353037255}
   - component: {fileID: 5257504427759210869}
+  - component: {fileID: 3463873891159220406}
   m_Layer: 0
   m_Name: Needle_Knob_Black_2
   m_TagString: Untagged
@@ -19,20 +20,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5302624282265446056
-Transform:
+--- !u!224 &7571311108084276067
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4818117248507624466}
-  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.47047696, y: -0.47047687, z: -0.5278746, w: -0.52787447}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1591}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -96.581, y: -90, z: -90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0889, y: 0.2744}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &9095423131312843021
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -52,6 +59,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -95,3 +103,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.022071442, y: 0.036562413, z: 0.011350738}
   m_Center: {x: -9.313226e-10, y: 0.0012989547, z: 0.0057858285}
+--- !u!222 &3463873891159220406
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818117248507624466}
+  m_CullTransparentMesh: 1

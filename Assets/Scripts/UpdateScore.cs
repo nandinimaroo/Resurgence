@@ -14,19 +14,32 @@ public class UpdateScore : MonoBehaviour
   TextMeshProUGUI Display=gameObject.GetComponent<TextMeshProUGUI>();
   
   int lives = GameStats.Lives;
+  if(Display)
     Display.text="You have "+lives.ToString()+" lives left.";
         }
-      
+       if(SceneManager.GetActiveScene().name=="L1toL2")
+        {
+  TextMeshProUGUI Display=gameObject.GetComponent<TextMeshProUGUI>();
+  if(Display)
+
+    Display.text="You Captured "+GameStats.CaptureScore+" Zombies";
+        }
+
+
+         if(SceneManager.GetActiveScene().name=="GameEnd")
+        {
+  TextMeshProUGUI Display=gameObject.GetComponent<TextMeshProUGUI>();
+  if(Display)
+
+    Display.text="You Treated "+GameStats.ZombiesTreated+" Zombies";
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetActiveScene().name=="L1toL2")
-        {
-  TextMeshProUGUI Display=gameObject.GetComponent<TextMeshProUGUI>();
-    Display.text="You Captured "+GameStats.CaptureScore+" Zombies";
-        }
+       
     
 
 

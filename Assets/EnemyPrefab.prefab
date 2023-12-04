@@ -921,10 +921,10 @@ MonoBehaviour:
   enemy: {fileID: 0}
   tag1: 
   countdown: {fileID: 1239786158}
-  damage_per_attack: 10
+  damage_per_attack: 5
   script: {fileID: 0}
-  r1: 10
-  r2: 15
+  r1: 7
+  r2: 10
 --- !u!195 &58145974
 NavMeshAgent:
   m_ObjectHideFlags: 0

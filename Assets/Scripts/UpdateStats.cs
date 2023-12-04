@@ -18,10 +18,10 @@ public class UpdateStats : MonoBehaviour
 PlayerMovementScript script=Player.GetComponent<PlayerMovementScript>();
 EnemySpawner spawner = Spawner.GetComponent<EnemySpawner>();
 TextMeshProUGUI Display=stats.GetComponent<TextMeshProUGUI>();
-GameStats.CaptureScore=script.ZombiesCaptured;
+// GameStats.CaptureScore=script.ZombiesCaptured;
 if(spawner&&script&&Display)
 
-    Display.text="Zombies Captured:"+script.ZombiesCaptured.ToString()+"/"+spawner.TotalZombies+"\nHealth:"+Math.Ceiling(script.health).ToString()+"/100\nReloads Left:"+GameStats.ReloadsLeft+"\nBullets In The Gun:"+GameStats.BulletsInGun;
+    Display.text="Zombies Captured:"+script.ZombiesCaptured.ToString()+"/"+spawner.TotalZombies+"\nHealth:"+Math.Ceiling(GameStats.Health).ToString()+"/100\nReloads Left:"+GameStats.ReloadsLeft+"\nBullets In The Gun:"+GameStats.BulletsInGun;
 
    }
 }

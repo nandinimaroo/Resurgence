@@ -14,6 +14,7 @@ TagManager:
   - UntreatableZombie
   - Spawner
   - HUD_Bullets
+  - Treatment
   layers:
   - Default
   - TransparentFX
