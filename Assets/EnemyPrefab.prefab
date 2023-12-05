@@ -921,7 +921,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   tag1: 
   countdown: {fileID: 1239786158}
-  damage_per_attack: 5
+  damage_per_attack: 10
   script: {fileID: 0}
   r1: 7
   r2: 10

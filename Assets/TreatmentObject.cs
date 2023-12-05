@@ -13,14 +13,16 @@ public class TreatmentObject : MonoBehaviour
     private bool isTreatmentInProgress = false;
     private float remainingTime;
     public int z = 0;
-    public Light spotlight;
+    private Light spotlight;
 private bool alltreated=false;
     void Start()
     {
         
         totalZombies = GameStats.CaptureScore;
         textMesh = GetComponent<TextMesh>();
-        
+         GameObject objectWithTag = GameObject.FindWithTag("spot");
+
+        spotlight=objectWithTag.GetComponent<Light>();
 
         UpdateText();
     }
@@ -29,9 +31,9 @@ private bool alltreated=false;
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
         if(totalZombies<5)
-        countdownTime = Random.Range(5,10);
+        countdownTime = Random.Range(7,10);
         else
-                countdownTime = Random.Range(0,5);
+                countdownTime = Random.Range(5,7);
 
         if (distance <= proximityRange)
         {
@@ -74,6 +76,7 @@ private bool alltreated=false;
             {
                 if (!isInRange)
                 {
+                    if(spotlight)
                                     spotlight.intensity=0;
 
                     StopTreatment();
@@ -93,6 +96,7 @@ private bool alltreated=false;
         
 
         // All zombies treated
+        if(spotlight)
                         spotlight.intensity=0;
 
         StopTreatment();

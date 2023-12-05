@@ -15,6 +15,7 @@ TagManager:
   - Spawner
   - HUD_Bullets
   - Treatment
+  - spot
   layers:
   - Default
   - TransparentFX

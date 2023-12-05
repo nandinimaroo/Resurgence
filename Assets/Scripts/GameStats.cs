@@ -17,7 +17,7 @@ public class GameStats
 
     static GameStats()
     {
-        Lives=5;
+        Lives=2;
     ZombiesKilled=0;
     ReloadsLeft=10;
     BulletsInGun=5;

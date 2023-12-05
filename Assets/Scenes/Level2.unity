@@ -2548,7 +2548,7 @@ RectTransform:
   m_Children:
   - {fileID: 1215613078}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3736,7 +3736,6 @@ MonoBehaviour:
   countdownTime: 10
   totalZombies: 3
   z: 0
-  spotlight: {fileID: 902286256}
 --- !u!65 &203990670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3761,9 +3760,10 @@ Transform:
   m_LocalPosition: {x: -11.84, y: 11.51, z: -11.8}
   m_LocalScale: {x: 3, y: 3, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 902286257}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 25.199, y: -81.59, z: 0.873}
 --- !u!102 &203990673
 TextMesh:
@@ -3846,7 +3846,6 @@ MonoBehaviour:
   countdownTime: 5
   totalZombies: 7
   z: 0
-  spotlight: {fileID: 0}
 --- !u!114 &224366069 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9158966710755945599, guid: 8ba7be579e8a12343809a90e07c86595, type: 3}
@@ -4093,7 +4092,7 @@ Transform:
   - {fileID: 2747070}
   - {fileID: 777059414}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &241436117
 MeshCollider:
@@ -8033,7 +8032,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 52.266, y: -24.551, z: 6.994}
 --- !u!4 &505826091 stripped
 Transform:
@@ -10321,7 +10320,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &739025162 stripped
 Transform:
@@ -12036,7 +12035,7 @@ GameObject:
   - component: {fileID: 902286256}
   m_Layer: 5
   m_Name: Spot Light
-  m_TagString: Untagged
+  m_TagString: spot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12110,17 +12109,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902286255}
-  m_LocalRotation: {x: 0.5216901, y: 0.5910135, z: -0.269231, w: 0.55322444}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.21174598, y: 0.6689973, z: -0.70858264, w: 0.07427585}
+  m_LocalPosition: {x: 0, y: 0, z: 6.4320564}
+  m_LocalScale: {x: 0.35205925, y: 0.463006, z: 0.33335903}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 203990672}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 63.568, y: 123.073, z: 45.733}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 18.48}
+  m_AnchoredPosition: {x: -1.8704491, y: 4.614396}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &904996053 stripped
@@ -16721,7 +16720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412390, guid: 381bdf9c7f27cce46b2699033a9b735a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 412390, guid: 381bdf9c7f27cce46b2699033a9b735a, type: 3}
       propertyPath: m_LocalScale.x
@@ -17855,7 +17854,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1353780353
 MonoBehaviour:
@@ -17872,7 +17871,7 @@ MonoBehaviour:
   Enemy: {fileID: 4103059298757344227, guid: da69b1db1c10cb7719f9c58c9f408fd1, type: 3}
   Interval: 1.5
   spawnRange: 20
-  TotalZombies: 20
+  TotalZombies: 30
   counter: 0
   player: {fileID: 166579508}
   EnemyPrefab: {fileID: 0}
@@ -21408,7 +21407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479812, guid: c391f12a928274acab8576bb6030641d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 479812, guid: c391f12a928274acab8576bb6030641d, type: 3}
       propertyPath: m_LocalScale.x
@@ -22813,7 +22812,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!54 &1940096052
 Rigidbody:

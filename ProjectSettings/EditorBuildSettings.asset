@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameEnd.unity
     guid: 6ecc6dd40f3081cad8d7e6b1c7a052ba
+  - enabled: 1
+    path: Assets/Scenes/GameLost.unity
+    guid: 9d7f6450544049a2e8b9b2e60f3326a1
   m_configObjects: {}

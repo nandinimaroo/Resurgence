@@ -239,13 +239,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d958ae55d405b3b298580882de1bdb5a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.035
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 33
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -392,8 +392,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286778879
-  m_fontColor: {r: 1, g: 0.051886797, b: 0.51551354, a: 1}
+    rgba: 4294803199
+  m_fontColor: {r: 1, g: 0.495283, b: 0.99226207, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1189,4 +1189,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ee70ffcebfa38e5a452e52aaf591d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitButton: {fileID: 0}
+  exitButton: {fileID: 2027855652}
