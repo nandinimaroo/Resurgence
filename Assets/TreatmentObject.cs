@@ -141,7 +141,7 @@ private bool alltreated=false;
         }
         else
         {
-            textMesh.text = "Out Of Range";
+            textMesh.text = "Control Unit";
         }
     }
 }

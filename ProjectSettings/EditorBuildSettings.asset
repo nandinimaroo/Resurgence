@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLost.unity
     guid: 9d7f6450544049a2e8b9b2e60f3326a1
+  - enabled: 1
+    path: Assets/Scenes/Keys.unity
+    guid: a471e7b0a726ea988947dc311c0134bb
+  - enabled: 1
+    path: Assets/Scenes/RetryL12.unity
+    guid: c5abc082c8d1b3d24bb45b4b27df7a63
   m_configObjects: {}

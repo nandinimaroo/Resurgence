@@ -9,7 +9,7 @@ public class UpdateScore : MonoBehaviour
     void Start()
     {
         Time.timeScale=1;
-       if(SceneManager.GetActiveScene().name=="RetryL1")
+       if(SceneManager.GetActiveScene().name=="RetryL1"||SceneManager.GetActiveScene().name=="RetryL12")
         {
   TextMeshProUGUI Display=gameObject.GetComponent<TextMeshProUGUI>();
   
@@ -33,7 +33,16 @@ public class UpdateScore : MonoBehaviour
 
     Display.text="You Treated "+GameStats.ZombiesTreated+" Zombies";
         }
-        
+         if(SceneManager.GetActiveScene().name=="GameLost")
+        {
+  TextMeshProUGUI Display=gameObject.GetComponent<TextMeshProUGUI>();
+  if(Display)
+if(GameStats.ZombiesTreated>0)
+    Display.text="You Treated "+GameStats.ZombiesTreated+" Zombies Before Dying";
+    else
+        Display.text="You Died Before Treating Any Zombies";
+
+        }
     }
 
     // Update is called once per frame

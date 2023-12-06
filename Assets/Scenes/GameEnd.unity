@@ -721,11 +721,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Have Successfully Turned Each Zombie You Captured Back Into A Human.
-    Inspiring Others To Follow Your Path, You Gave Humanity Its Last Push To Rise
-    Again And Bring The Dawn. With The Dawn Of A New Era, The World Stands Resilient
-    Against The Tides Of Darkness. Congratulations On Your Triumph, And Thank You
-    For Playing Resurgence!
+  m_text: Congratulations on a successfull mission Agent x!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 36295308545f30006a9583a1624ff766, type: 2}
   m_sharedMaterial: {fileID: -4516758962757200226, guid: 36295308545f30006a9583a1624ff766, type: 2}
@@ -759,7 +755,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 32
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

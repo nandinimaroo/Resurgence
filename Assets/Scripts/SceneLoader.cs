@@ -31,6 +31,18 @@ Time.timeScale = 1.0f;
             GameStats.ZombiesTreated=0;
 
         }
+ if (SceneManager.GetActiveScene().name=="RetryL12")
+        {
+            GameStats.Lives--;
+
+            GameStats.Health=100;
+            GameStats.BulletsInGun=5;
+            GameStats.ReloadsLeft=10;
+            GameStats.CaptureScore=0;
+            GameStats.ZombiesKilled=0;
+            GameStats.ZombiesTreated=0;
+
+        }
 
         // Iterate through the root objects and make sure they don't get destroyed on scene load
                     SceneManager.LoadScene(sceneName);

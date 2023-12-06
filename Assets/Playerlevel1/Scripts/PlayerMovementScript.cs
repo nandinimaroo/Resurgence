@@ -123,7 +123,11 @@ if(GameStats.Lives>0)
 
 		WalkingSound ();
 
-
+  if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Exit the game
+            Application.Quit();
+        }
 
 	}//end update
 

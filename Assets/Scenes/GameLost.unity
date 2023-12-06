@@ -334,7 +334,6 @@ GameObject:
   - component: {fileID: 209100094}
   - component: {fileID: 209100096}
   - component: {fileID: 209100095}
-  - component: {fileID: 209100098}
   - component: {fileID: 209100097}
   m_Layer: 5
   m_Name: Title
@@ -470,18 +469,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7fc618af63c16dae87cca977e8dc757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &209100098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209100093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a651385113f9555ab657f16fd33f634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &705507993
@@ -721,10 +708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In The Face Of Overwhelming Darkness, Your Valiant Efforts Couldn't Stave
-    Off The Inevitable. The World Succumbed To The Zombie Horde, Leaving It Shrouded
-    In Shadows. Despite The Defeat, Your Resilience Will Be Remembered. Thank You
-    For Playing Resurgence!
+  m_text: You Died Fighting For The Resurgence Of Humanity.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 36295308545f30006a9583a1624ff766, type: 2}
   m_sharedMaterial: {fileID: -4516758962757200226, guid: 36295308545f30006a9583a1624ff766, type: 2}
@@ -758,7 +742,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 32
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1188,4 +1172,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ee70ffcebfa38e5a452e52aaf591d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitButton: {fileID: 0}
+  exitButton: {fileID: 2027855652}

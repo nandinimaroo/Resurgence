@@ -43,7 +43,10 @@ counter=TotalZombies;
              Cursor.lockState = CursorLockMode.None;
 Cursor.visible = true;
 Time.timeScale = 1.0f;
+if(GameStats.CaptureScore>0)
             SceneManager.LoadScene("L1toL2");
+            else
+            SceneManager.LoadScene("RetryL12");
         }
     }
  
